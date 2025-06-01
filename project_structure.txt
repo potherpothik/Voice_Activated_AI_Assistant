@@ -1,0 +1,26 @@
+voice_assistant/
+├── main.py                 # Main application entry point
+├── config.py               # Configuration settings
+├── services/               # Service-specific modules
+│   ├── __init__.py
+│   ├── ac_repair.py
+│   ├── fridge_repair.py
+│   ├── oven_repair.py
+│   └── washing_machine.py
+├── llm/                    # LLM integration components
+│   ├── __init__.py
+│   ├── gemma_chain.py      # LangChain setup for Gemma
+│   └── prompt_templates/   # Prompt templates for different scenarios
+│       └── system_prompt.txt
+├── voice/                  # Voice processing components
+│   ├── __init__.py
+│   ├── stt.py              # Speech-to-Text with Deepgram
+│   └── tts.py              # Text-to-Speech with Deepgram
+├── embeddings/             # Vector embeddings components
+│   ├── __init__.py
+│   ├── generate_embeddings.py
+│   └── service_store.pkl   # Stored service embeddings
+├── utils/                  # Utility functions
+│   └── audio_io.py         # Audio input/output handling
+├── requirements.txt
+└── README.md

@@ -1,0 +1,41 @@
+Testing the System
+To test your voice-activated AI assistant, run the main application:
+
+Copypython main.py
+The system will:
+
+Initialize all components
+Generate embeddings for services (if not already done)
+Listen for your voice input
+Process your query using Gemma LLM
+Respond appropriately with spoken output
+Sample Scenarios
+Here's how the assistant handles the sample scenarios from the requirements:
+
+Scenario 1: AC Repair
+User: "Hi, my AC is blowing warm air."
+
+Assistant Process:
+
+STT converts speech to text
+Gemma LLM identifies this as an AC issue
+AC repair service module provides specific response
+TTS converts the response to speech
+Assistant Response: "I understand you're having trouble with your air conditioner. It sounds like there may be an issue with your refrigerant levels or a problem with the compressor. Our AC repair technician can diagnose and fix this cooling issue. When was the last time you had your AC serviced?"
+
+Scenario 2: Fridge Repair
+User: "There's water leaking from my fridge."
+
+Assistant Response: "I see that your refrigerator is leaking water. This is commonly caused by a blocked defrost drain or a water supply line issue. Our refrigerator repair service can address this problem quickly. Where exactly is the water coming from? Is it from under the fridge or inside one of the compartments?"
+
+Advanced Features to Consider
+Multi-turn conversations: Implement memory in LangChain to track conversation context
+Automated scheduling: Add functionality to check technician availability and schedule appointments
+Visual troubleshooting: Extend to handle image input for visual diagnosis
+Cost estimation: Provide estimated repair costs based on described issues
+Conclusion
+This voice-activated AI assistant provides a powerful interface for home appliance repair service requests. By using locally-running open-source tools like Gemma, Ollama, LangChain, and Deepgram, you've created a fully functional system that can understand natural language requests and respond appropriately.
+
+The modular architecture makes it easy to extend with additional service types or enhance existing functionality. With further development, this system could become an essential tool for a home appliance repair business, improving customer service while reducing human workload for routine inquiries.
+
+ollama pull gemma:2b
